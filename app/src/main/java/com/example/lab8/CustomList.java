@@ -74,17 +74,14 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public void deleteCity(String cityName, String provinceName) {
-//        for (City city : cities) {
-//            if (city.getCityName().equals(cityName) && city.getProvinceName().equals(provinceName)) {
-//                cities.remove(city);
-//                notifyDataSetChanged();
-//                return;
-//            }
-//        }
-        return;
+       for (City city : cities) {
+           if (city.getCityName().equals(cityName) && city.getProvinceName().equals(provinceName)) {
+               cities.remove(city);
+               return;
+           }
+       }
     }
     public int getSize(){
-        return 0;
-        //return cities.size();
+        return cities.size();
     }
 }
