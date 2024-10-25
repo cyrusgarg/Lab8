@@ -65,12 +65,26 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public Boolean hasCity(String cityName, String provinceName) {
+        for (City city : cities) {
+            if (city.getCityName().equals(cityName) && city.getProvinceName().equals(provinceName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void deleteCity(String cityName, String provinceName) {
 //        for (City city : cities) {
 //            if (city.getCityName().equals(cityName) && city.getProvinceName().equals(provinceName)) {
-//                return true;
+//                cities.remove(city);
+//                notifyDataSetChanged();
+//                return;
 //            }
 //        }
-//        return false;
-        return false;
+        return;
+    }
+    public int getSize(){
+        return 0;
+        //return cities.size();
     }
 }

@@ -44,4 +44,21 @@ public class CustomListTest {
         list.addCity(new City("Estevan","SK"));
         assertTrue(list.hasCity("Estevan","SK"));
     }
+    /**
+     * check if deleteCity function delete the city
+     */
+    @Test
+    public void deleteCityTest(){
+        list=MockCityList();
+        list.addCity(new City("Estevan","SK"));
+        list.deleteCity("Estevan","SK");
+        assertEquals(list.getCount(),0);
+    }
+    public void countTest(){
+        list=MockCityList();
+        list.addCity(new City("Estevan","SK"));
+        assertEquals(list.getSize(),1);
+    }
 }
+
+
