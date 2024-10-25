@@ -63,7 +63,11 @@ public class CustomList extends ArrayAdapter<City> {
     public void addCity(City city) {
         cities.add(city);
     }
-
+    /**
+     * this checks if the list has the city
+     *
+     * @return boolean
+     */
     public Boolean hasCity(String cityName, String provinceName) {
         for (City city : cities) {
             if (city.getCityName().equals(cityName) && city.getProvinceName().equals(provinceName)) {
@@ -72,7 +76,11 @@ public class CustomList extends ArrayAdapter<City> {
         }
         return false;
     }
-
+    /**
+     * this deletes the city from the list
+     *
+     * @param cityName, provinceName
+     */
     public void deleteCity(String cityName, String provinceName) {
        for (City city : cities) {
            if (city.getCityName().equals(cityName) && city.getProvinceName().equals(provinceName)) {
@@ -81,6 +89,11 @@ public class CustomList extends ArrayAdapter<City> {
            }
        }
     }
+    /**
+     * this gets the size of the list
+     *
+     * @return int
+     */
     public int getSize(){
         return cities.size();
     }
