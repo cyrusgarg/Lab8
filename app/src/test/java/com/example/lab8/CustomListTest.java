@@ -54,6 +54,10 @@ public class CustomListTest {
         list.deleteCity("Estevan","SK");
         assertEquals(list.getCount(),0);
     }
+    /**
+     * check if count function working right
+     */
+    @Test
     public void countTest(){
         list=MockCityList();
         list.addCity(new City("Estevan","SK"));
